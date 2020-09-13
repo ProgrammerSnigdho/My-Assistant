@@ -110,7 +110,7 @@ function readOutLoud(message) {
 
 
 
-    speech.volume = 2;
+    speech.volume = 10;
     speech.rate = 1;
     speech.pitch = 1;
 
