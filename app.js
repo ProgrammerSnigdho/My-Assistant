@@ -99,11 +99,11 @@ function readOutLoud(message) {
         speech.text = "I know Siri";
     } else if (message.includes('can you code')) {
         speech.text = "I can't code 😭";
-    } else if (message.includes('owner of Blogger')) {
+    } else if (message.includes('owner of Blogger' || 'owner of blogger')) {
         speech.text = "The Owner Of Blogger Is Google";
-    } else if (message.includes('owner of GitHub')) {
+    } else if (message.includes('owner of GitHub' || 'owner of Github' || 'owner of gitHub' || 'owner of github')) {
         speech.text = "The Owner Of Github Is Microsoft";
-    } else if (message.includes('owner of Stack Overflow')) {
+    } else if (message.includes('owner of Stack Overflow' || 'owner of Stack overflow' || 'owner of stack Overflow' || 'owner of stack overflow')) {
         speech.text = "The Owner Of Stack Overflow Is Stack Exchange Incorporate";
     }
 
