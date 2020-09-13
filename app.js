@@ -24,11 +24,11 @@ const tell_me_a_joke = [
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition()
 
-recognition.onstart = function () {
+recognition.onstart = function() {
     console.log('Voice Is Activated, You Can To Microphoneee')
 };
 
-recognition.onresult = function (event) {
+recognition.onresult = function(event) {
     const current = event.resultIndex;
     const transcript = event.results[current][0].transcript;
     content.textContent = transcript;
@@ -77,7 +77,7 @@ function readOutLoud(message) {
     } else if (message.includes("i am bored")) {
         speech.text = "You think you're bored, I came out of a cardboard box. But I learned a lot of jokes in there."
     } else if (message.includes("tell me a joke")) {
-        joke_result = tell_me_a_joke[Math.floor(Math.random() * tell_me_a_joke,length)]
+        joke_result = tell_me_a_joke[Math.floor(Math.random() * tell_me_a_joke, length)]
         speech.text = joke_result;
     } else if (message.includes("web developer salary")) {
         speech.text = "The average salary for a web developer in the United States is around $69,038 per year."
@@ -91,12 +91,20 @@ function readOutLoud(message) {
         speech.text = "If You Want To Make Web Applications The Best Language Is JavaScript. If You Want To Make Desktop Software The Best Language Is Java. If You Want To Make Mobile Applications The Best Language Is Java. If You Want To Develop Games The Best Language Is C or C++.";
     } else if (message.includes("i need an degree for coding")) {
         speech.text = "Many tech companies like Google, Apple, and IBM no longer require a college degree for some of their top jobs, according to Glassdoor. While many companies still require a degree, others have begun to realize needed skills and experience that can be gained through nontraditional routes.";
-    } else if (message.includes('you like Google Assistant')) {
+    } else if (message.includes('you like Google assistant')) {
         speech.text = "I really like Google Assistant";
     } else if (message.includes('you like Siri')) {
         speech.text = "I really like Siri";
     } else if (message.includes('you know Siri')) {
         speech.text = "I know Siri";
+    } else if (message.includes('can you code')) {
+        speech.text = "I can't code 😭";
+    } else if (message.includes('owner of Blogger')) {
+        speech.text = "The Owner Of Blogger Is Google";
+    } else if (message.includes('owner of GitHub')) {
+        speech.text = "The Owner Of Github Is Microsoft";
+    } else if (message.includes('owner of Stack Overflow')) {
+        speech.text = "The Owner Of Stack Overflow Is Stack Exchange Incorporate";
     }
 
 
